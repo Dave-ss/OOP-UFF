@@ -1,0 +1,30 @@
+
+package ex1;
+import java.util.Scanner;
+
+/**
+ *
+ * @author davi
+ */
+public class Ex1 {
+
+    public static void main(String[] args) {
+        //declaraĆ§Ć£o do scanner e variaveis usadas
+        Scanner ler = new Scanner(System.in);
+        int c=0, k, entrada;
+        
+    //entrada do loop    
+        System.out.print("Quantos valores serao inseridos: ");
+        k = ler.nextInt();
+        
+    //loop
+        for(int i=0; i<k;i++){
+            System.out.printf("Insira o %d valor: ", i+1);
+            entrada = ler.nextInt();
+            if (entrada < 0)    c++;
+        }
+        
+    //exibe o resultado de negativos inseridos
+         System.out.printf("Foram inseridos %d valores negativos.", c);
+    }
+}
