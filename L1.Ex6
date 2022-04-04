@@ -9,7 +9,7 @@ package ex6;
 
 /**
  *
- * @author davi2
+ * @author davi
  */
 public class Ex6 {
     public static void main(String[] args) {
