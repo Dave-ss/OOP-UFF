@@ -17,7 +17,7 @@ public class Contato {
         
     }
     
-    public void cria_Contato(String nome, String email, String numero){
+    Contato(String nome, String email, String numero){
         this.email = email;
         this.nome = nome;
         this.numero = numero;
