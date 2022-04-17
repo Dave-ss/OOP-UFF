@@ -1,0 +1,19 @@
+/*Crie uma porta, abra e feche a mesma, pinte-a de diversas cores, altere suas dimensões e use o método estaAberta para verificar se ela está aberta*/
+
+class Main {
+  public static void main(String[] args) {
+	Porta porta = new Porta("rosa", false, "1x1");
+	porta.abrirPorta();
+	porta.fecharPorta();
+	porta.setCor("azul");
+	porta.setCor("verde");
+	porta.setCor("amarelo");
+	porta.setCor("vemelho");
+	porta.setDimensao("2x0.80");
+	System.out.printf("A porta de cor %s tem %sM\n",porta.getCor(), porta.getDimenso());
+	if(porta.isOpen()) System.out.println("Ta aberta");
+	else System.out.println("Ta fechada");
+	
+   
+  }
+}
