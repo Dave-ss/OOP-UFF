@@ -2,7 +2,7 @@
 public class Celular {
 
     private double imei;
-    public int capacidade_bateria;
+    private int capacidade_bateria;
 
     public Celular(){
 
