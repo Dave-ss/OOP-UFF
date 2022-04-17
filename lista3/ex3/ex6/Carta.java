@@ -1,13 +1,13 @@
 
 class Carta{
-	public String valor;
-	public String naipe;
+	private String valor;
+	private String naipe;
 
 	public Carta(){
 		
 	}
 
-	public void criaCarta(String valor, String nipe){
+	Carta(String valor, String nipe){
 		this.valor = valor;
 		this.naipe = nipe;
 	}
