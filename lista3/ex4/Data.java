@@ -17,19 +17,19 @@ public class Data {
         
     }
     
-    public void criaData(int mes, int dia, int ano){
+    Data(int mes, int dia, int ano){
         this.mes = mes;
         this.dia = dia;
         this.ano = ano;
     }
     
-    public void criaData(String mess, int dia, int ano){
+    Data(String mess, int dia, int ano){
         this.mess = mess;
         this.dia = dia;
         this.ano = ano;
     }
     
-    public void criaData(int dia, int ano){
+    Data(int dia, int ano){
         this.dia = dia;
         this.ano = ano;
     }
