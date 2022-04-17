@@ -12,15 +12,11 @@ package com.mycompany.ex1;
 public class Ex1 {
 
     public static void main(String[] args) {
-        Contato c1 = new Contato();
-        Contato c2 = new Contato();
-        Contato c3 = new Contato();
+        Contato c1 = new Contato("alpha", "a@id.uff.br", "123456");
+        Contato c2 = new Contato("bravo", "b@gmail.com", "654321");
+        Contato c3 = new Contato("charlie", "c@hotmail.com", "785213");
         
         Agenda agenda = new Agenda();
-        
-        c1.cria_Contato("alpha", "a@id.uff.br", "123456");
-        c2.cria_Contato("bravo", "b@gmail.com", "654321");
-        c3.cria_Contato("charlie", "c@hotmail.com", "785213");
         
         agenda.adc_contato(c1, 0);
         agenda.adc_contato(c2, 1);
