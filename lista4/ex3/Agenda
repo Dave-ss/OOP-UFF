@@ -1,0 +1,86 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ex3;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
+
+
+
+
+/**
+ *
+ * @author Aluno
+ */
+public class Agenda {
+    private ArrayList <Compromisso> compromissos = new ArrayList<>();
+    private Calendar data;
+    
+    
+    /*
+    imprimir compromissos de um dia
+    escolher tipo de saida de data
+    escolher imprimir*/
+    Agenda(){
+        
+    }
+    
+    public void addCompromisso(Compromisso c){
+        this.compromissos.add(c);
+    }
+    
+    public void setData(int dia, int mes, int ano){
+        data.set(dia,mes,ano);
+    }
+    
+    public void printaCompromissos(){
+        for(Compromisso c: compromissos){
+            if(c.getData() == this.data){
+            System.out.println("Titulo: " + c.getTitulo());
+            System.out.println("Descricao: " + c.getDescricao());
+            System.out.println("Local: " + c.getLocal());
+            System.out.println();
+        
+            }
+            
+        }
+    }
+    
+    private SimpleDateFormat tipo(String s, String idioma){
+        if(s == "extenso"){
+            return formataDataExt(idioma);
+        }
+        else {
+            return formataDataNormal(idioma);
+        }
+
+    }
+    
+    private SimpleDateFormat formataDataExt(String idioma){
+        if("pt".equals(idioma)){
+                SimpleDateFormat d = new SimpleDateFormat("ddd/mmm/yyyy");
+                return d;
+            }
+        else if("en".equals(idioma)){
+                SimpleDateFormat d = new SimpleDateFormat("mmm/ddd/yyyy");    
+                return d;
+            }
+        return null;
+    }
+    
+    private SimpleDateFormat formataDataNormal(String idioma){
+        if("pt".equals(idioma)){
+                SimpleDateFormat d = new SimpleDateFormat("dd/mm/yyyy");
+                return d;
+            }
+        else if("en".equals(idioma)){
+                SimpleDateFormat d = new SimpleDateFormat("mm/dd/yyyy");    
+                return d;
+            }
+        return null;
+    }
+}
