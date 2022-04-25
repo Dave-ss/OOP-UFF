@@ -1,0 +1,32 @@
+
+/*Escreva um programa de agenda de compromissos. Nesse programa, o usuário poderá
+informar sua lista de compromissos em que cada compromisso contém título, 
+descrição, local e data. O programa deverá permitir que o usuário imprima todos 
+os compromissos de um determinado dia. Além disso, o usuário poderá escolher se
+deseja imprimir a data em formato extenso ou não e, ainda, poderá escolher 
+imprimir em português ou inglês. Dica: Pesquise sobre as classes Calendar, DataFormat e Locale.
+
+agenda
+lista de comprimissos
+compromisso(titulo/descrição/local/data)
+imprimir compromissos de um dia
+escolher tipo de saida de data
+escolher imprimir*/
+
+package ex3;
+
+/**
+ *
+ * @author Aluno
+ */
+public class Ex3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+    }
+    
+}
