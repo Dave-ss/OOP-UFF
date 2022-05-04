@@ -1,0 +1,51 @@
+No enunciado abaixo, identifique possíveis classes de objetos, seus atributos e métodos, usando o mecanismo de herança. Dê um exemplo de instância para cada classe identificada.  
+
+
+“Pokémons são criaturas que os seres humanos capturam e treinam para lutarem uns contra os outros como um esporte. Os Pokémons podem ser de diversos tipos como, por exemplo, Fogo, Elétrico, Água, etc. 
+
+Cada Pokémon pode aprender diversos ataques que são utilizados para ferir o adversário; outros que fortalecem ataques de um tipo ou que enfraquecem os adversários, diminuindo seus stats; e outros que impõem condições negativas (adormecer, envenenar, congelar, queimar, paralisar, confundir). 
+
+Os ataques possuem precisão, potência e uma quantidade de vezes que podem ser utilizados. Cada Pokémon tem sua habilidade que provoca mudanças nas batalhas ou fora delas. 
+
+Existem habilidades que podem anular o dano de um ataque, provocar mudanças nos stats do Pokémon ou impor uma condição ao Pokémon na batalha. 
+
+Cada Pokémon possui seis stats: HP (Hit Points), Atk (Attack), Def (Defense), Sp. Atk (Special Attack), Sp. Def (Special Defense) e Spd (Speed). 
+
+Os Pokémons possuem valores fixos que determinam seus stats e todos os Pokémons do mesmo tipo possuem o mesmo valor de base em cada stats. 
+
+Um Pokémon pode evoluir, ou seja, mudar de forma, acompanhado de uma melhora em seus stats.  Evolução em Pokémon pode ocorrer por diversas razões, sendo que a mais comum se dá por acúmulo de experiência em batalhas (aumentando o seu nível).
+
+Quando um Pokémon evolui, ele troca de aparência, tamanho, peso, nome, stats e pode aprender ataques e habilidades que a sua forma anterior não aprenderia.”.
+
+Classe: SerHumano
+Atributos: nome, dataNasc.
+Metodos: capturaPokemon(), treinarPokemon().
+
+superClasse: Pokemons
+Atributos: hp, atk, def, spAtk, spDef, spd, exp.
+Metodos: evoluir()
+
+Classe: Pokemon extends Pokemons
+Atributos: nome, tamanho, tipo, aparencia.
+Metodos: batalhar(), passear(), Comer(), Descansar
+
+
+superClasse: Habilidades
+Atributos: quantidadeDeUso, potencia, precisao.
+Metodos: UsarHabilidade(),
+
+Classe: Ataque extends Habilidades
+Atributos: DanoCausado
+Metodos: 
+
+Classe: Defesa extends Habilidades
+Atributos: PorcentagemDeDefesa
+Metodos: 
+
+Classe: Buff extends Habilidades
+Atributos: QuantidadeTurnos
+Metodos: 
+
+Classe: Debuff extends Habilidades
+Atributos: QuantidadeTurnos
+Metodos:
