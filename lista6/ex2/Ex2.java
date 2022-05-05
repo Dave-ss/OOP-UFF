@@ -16,7 +16,7 @@ import Pessoas.Pj;
 public class Ex2 {
 
     public static void main(String[] args) {
-        Pf pf1 = new Pf("dave", "123456789-0");
+        Pf pf1 = new Pf("dave", 1234567890);
         pf1.setAniversario("7/12/9999");
         pf1.setLocal("Brazil", "Rj", "niteroi");
         
@@ -24,7 +24,7 @@ public class Ex2 {
         pj1.setLocal("Brazil", "Sp", "zsul");
         pj1.setFaturamento(9999);
         
-        Pessoa qq = new Pessoa("bobo", "00000000");
+        Pessoa qq = new Pessoa("bobo");
         qq.setLocal("bobolandia", "babado", "bo");
         
         Agenda a = new Agenda();
@@ -33,10 +33,12 @@ public class Ex2 {
         a.addPessoa(pj1);
         a.addPessoa(qq);
         
+
         
         a.printaPessoas();
-        
-        a.busca("123456789-0");
-        
+        System.out.println();
+        System.out.println();
+        a.busca("1234567890");
+
     }
 }
