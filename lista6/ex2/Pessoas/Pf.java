@@ -12,40 +12,46 @@ import java.util.Date;
  * @author davi2
  */
 public class Pf extends Pessoa {
-   // private Date aniversario;
     private String aniversario;
+    private Integer cpf;
     
     
     public Pf(){
         super();
     }
     
-    public Pf(String nome, String cpf){
-        super(nome, cpf);       
+    public Pf(String nome, Integer cpf){
+        super(nome);
+        this.cpf = cpf;
     }
-
-//    public void setAniversario(int ano, int mes, int dia){
-//        this.aniversario = new Date(ano, mes, dia);
-//    }
-//
-//    public Date getAniversario() {
-//        return aniversario;
-//    }
 
     public void setAniversario(String aniversario) {
         this.aniversario = aniversario;
     }
 
+    public void setCpf(Integer cpf) {
+        this.cpf = cpf;
+    }
+    
     public String getAniversario() {
         return aniversario;
+    }
+
+    public Integer getCpf() {
+        return cpf;
     }
     
     
     @Override
-     public void printaPessoa() {
-         super.printaPessoa();
-         System.out.println("Aniversario: " + aniversario);
-         System.out.println();
-     }
-
+    public void printaPessoa() {
+        super.printaPessoa();
+        System.out.println("Aniversario: " + this.aniversario);
+        System.out.println("Cpf: " + this.cpf);
+    }
+    
+    @Override
+    public boolean buscaCpf(String id){
+        return (this.cpf.equals(Integer.valueOf(id)));
+    }
+     
 }
