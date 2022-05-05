@@ -13,15 +13,15 @@ import java.util.Locale;
 public class Pessoa {
     protected String nome;
     protected Locale local;
-    protected String id;
+//    protected String id;
     
     public Pessoa(){
-        this("", "");
+        this("");
     }
 
-    public Pessoa(String nome, String id){
+    public Pessoa(String nome){
         this.nome = nome;
-        this.id = id;
+        
     }
     
     public void setNome(String nome){
@@ -32,14 +32,18 @@ public class Pessoa {
        this.local = new Locale(pais, estado, local);
     } 
 
-    public void setId(String id) {
-        this.id = id;
+    public boolean buscaCpf(String id){
+        return false;
     }
+
+    public boolean buscaCnpj(String id){
+        return false;
+    }    
     
     public void printaPessoa(){
         System.out.println("Nome: " + nome);
         System.out.println("Local: " + local);
-        System.out.println("Id: " + id);
+        
     }
     
     public String getNome(){
@@ -50,8 +54,5 @@ public class Pessoa {
         return local;
     }   
 
-    public String getId() {
-        return id;
-    }
    
 }
