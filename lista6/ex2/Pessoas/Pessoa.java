@@ -4,55 +4,50 @@
  */
 package Pessoas;
 
-import java.util.Locale;
-
 /**
  *
  * @author davi2
  */
-public class Pessoa {
-    protected String nome;
-    protected Locale local;
-//    protected String id;
+public class Pj extends Pessoa {
+    private String cnpj;
+    private double faturamento;
     
-    public Pessoa(){
-        this("");
+    public Pj(){
+        super();
+    }
+    
+    public Pj(String razao_social, String cnpj){
+        super(razao_social);
+        this.cnpj = cnpj;
     }
 
-    public Pessoa(String nome){
-        this.nome = nome;
-        
+    public void setFaturamento(double faturamento) {
+        this.faturamento = faturamento;
+    }
+
+    public double getFaturamento() {
+        return faturamento;
     }
     
-    public void setNome(String nome){
-        this.nome = nome;
-    }
-    
-    public void setLocal(String pais, String estado, String local){
-       this.local = new Locale(pais, estado, local);
+    @Override
+    public void printaPessoa(){
+        super.printaPessoa();
+        System.out.println("Faturamento: " + this.faturamento);
+        System.out.println("Cnpj: " + this.cnpj);
     } 
 
-    public boolean buscaCpf(String id){
-        return false;
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
-
+    
+    public String getCnpj() {
+        return cnpj;
+    }
+    
+    @Override
     public boolean buscaCnpj(String id){
-        return false;
+        return this.cnpj.equals(id);
     }    
-    
-    public void printaPessoa(){
-        System.out.println("Nome: " + nome);
-        System.out.println("Local: " + local);
         
-    }
     
-    public String getNome(){
-        return nome;
-    }
-
-    public Locale getLocal(){
-        return local;
-    }   
-
-   
 }
