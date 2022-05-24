@@ -1,0 +1,79 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ex1;
+
+/**
+ *
+ * @author Aluno
+ */
+public class ContaCorrente {
+    
+    private float limite;
+    private float saldo;
+    private float valorLimite;
+    
+    public ContaCorrente(){
+        
+    }
+
+    public void setSaldo(float saldo) {
+        this.saldo = saldo;
+    }
+
+    public float setValorLimite() {
+        return limite;
+    }
+
+    public float getLimite() {
+        return limite;
+    }
+
+    public void setValorLimite(float valorLimite) {
+        this.valorLimite = valorLimite;
+    }
+    
+    public float getSaldo() {
+        return saldo;
+    }
+
+    public float getValorLimite() {
+        return valorLimite;
+    }
+    public void sacar(){
+        throw new IllegalArgumentException("o saque não pode ser vazio.");
+    }
+    
+    public void sacar(Float a){
+        
+        if(a<=0)
+            throw new IllegalArgumentException("valor negativo inserido");
+        else if (this.saldo < a){
+            System.out.println("voce não tem saldo suficiente para essa transação.");
+        }
+        else{
+            this.saldo -= a;
+            System.out.println("o valor R$: " + a + " foi sacado com sucesso");
+        }
+        
+    }
+    public void depositar() {
+       throw new IllegalArgumentException("o deposito não pode ser vazio.");
+    }
+    
+    public void depositar(float a) {
+       this.saldo += a;       
+    }
+    
+    public void setLimite() {
+        throw new IllegalArgumentException("o novo limite não pode ser vazio.");
+    }
+    
+    public void setLimite(float a) {
+        this.limite = a;
+            
+    }
+    
+}
